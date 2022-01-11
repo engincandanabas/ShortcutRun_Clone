@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Stack
+  - Pickup
+  - Floor
+  - Placed
+  - PointArea
+  - FloorStack
+  - Game Manager
+  - NPC_
+  - NPC_1
+  - NPC_2
+  - NPC_3
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Floor
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

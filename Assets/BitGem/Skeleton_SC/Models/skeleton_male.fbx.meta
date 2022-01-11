@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: 8db98ab11fafa45a79cc0fff87d5af29
+timeCreated: 1517832374
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: eyes_skeleton_neutral
+    100002: hair_afro_messy
+    100004: head1_head
+    100006: head1_neck
+    100008: jaw_skeleton_male
+    100010: leftArm1_LoResClavical
+    100012: leftArm1_LoResHand
+    100014: leftArm1_LoResLowerArm
+    100016: leftArm1_LoResUpperArm
+    100018: leftLeg1_LoResFoot
+    100020: leftLeg1_LoResLowerLeg
+    100022: leftLeg1_LoResToe
+    100024: leftLeg1_LoResUpperLeg
+    100026: rightArm1_LoResClavical
+    100028: rightArm1_LoResHand
+    100030: rightArm1_LoResLowerArm
+    100032: rightArm1_LoResUpperArm
+    100034: rightLeg1_LoResFoot
+    100036: rightLeg1_LoResLowerLeg
+    100038: rightLeg1_LoResToe
+    100040: rightLeg1_LoResUpperLeg
+    100042: skeleton_male
+    100044: //RootNode
+    100046: spine1_loResSpine1
+    100048: spine1_loResSpine2
+    100050: spine1_loResSpine3
+    100052: TSMGWorldJoint
+    400000: eyes_skeleton_neutral
+    400002: hair_afro_messy
+    400004: head1_head
+    400006: head1_neck
+    400008: jaw_skeleton_male
+    400010: leftArm1_LoResClavical
+    400012: leftArm1_LoResHand
+    400014: leftArm1_LoResLowerArm
+    400016: leftArm1_LoResUpperArm
+    400018: leftLeg1_LoResFoot
+    400020: leftLeg1_LoResLowerLeg
+    400022: leftLeg1_LoResToe
+    400024: leftLeg1_LoResUpperLeg
+    400026: rightArm1_LoResClavical
+    400028: rightArm1_LoResHand
+    400030: rightArm1_LoResLowerArm
+    400032: rightArm1_LoResUpperArm
+    400034: rightLeg1_LoResFoot
+    400036: rightLeg1_LoResLowerLeg
+    400038: rightLeg1_LoResToe
+    400040: rightLeg1_LoResUpperLeg
+    400042: skeleton_male
+    400044: //RootNode
+    400046: spine1_loResSpine1
+    400048: spine1_loResSpine2
+    400050: spine1_loResSpine3
+    400052: TSMGWorldJoint
+    2100000: skeleton_mat
+    2300000: eyes_skeleton_neutral
+    2300002: hair_afro_messy
+    2300004: jaw_skeleton_male
+    3300000: eyes_skeleton_neutral
+    3300002: hair_afro_messy
+    3300004: jaw_skeleton_male
+    4300000: skeleton_male
+    4300002: jaw_skeleton_male
+    4300004: eyes_skeleton_neutral
+    4300006: hair_afro_messy
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: skeleton_male
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

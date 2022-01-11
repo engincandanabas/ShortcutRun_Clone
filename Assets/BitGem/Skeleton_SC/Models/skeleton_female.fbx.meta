@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 28f37076fc3a04228b830a275687a08d
+timeCreated: 1517832373
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: eye_lashes
+    100002: eyes_skeleton_neutral
+    100004: hair_afro_lowhanging
+    100006: head1_head
+    100008: head1_neck
+    100010: jaw_skeleton_female
+    100012: leftArm1_LoResClavical
+    100014: leftArm1_LoResHand
+    100016: leftArm1_LoResLowerArm
+    100018: leftArm1_LoResUpperArm
+    100020: leftLeg1_LoResFoot
+    100022: leftLeg1_LoResLowerLeg
+    100024: leftLeg1_LoResToe
+    100026: leftLeg1_LoResUpperLeg
+    100028: rightArm1_LoResClavical
+    100030: rightArm1_LoResHand
+    100032: rightArm1_LoResLowerArm
+    100034: rightArm1_LoResUpperArm
+    100036: rightLeg1_LoResFoot
+    100038: rightLeg1_LoResLowerLeg
+    100040: rightLeg1_LoResToe
+    100042: rightLeg1_LoResUpperLeg
+    100044: skeleton_base_female
+    100046: //RootNode
+    100048: spine1_loResSpine1
+    100050: spine1_loResSpine2
+    100052: spine1_loResSpine3
+    100054: TSMGWorldJoint
+    400000: eye_lashes
+    400002: eyes_skeleton_neutral
+    400004: hair_afro_lowhanging
+    400006: head1_head
+    400008: head1_neck
+    400010: jaw_skeleton_female
+    400012: leftArm1_LoResClavical
+    400014: leftArm1_LoResHand
+    400016: leftArm1_LoResLowerArm
+    400018: leftArm1_LoResUpperArm
+    400020: leftLeg1_LoResFoot
+    400022: leftLeg1_LoResLowerLeg
+    400024: leftLeg1_LoResToe
+    400026: leftLeg1_LoResUpperLeg
+    400028: rightArm1_LoResClavical
+    400030: rightArm1_LoResHand
+    400032: rightArm1_LoResLowerArm
+    400034: rightArm1_LoResUpperArm
+    400036: rightLeg1_LoResFoot
+    400038: rightLeg1_LoResLowerLeg
+    400040: rightLeg1_LoResToe
+    400042: rightLeg1_LoResUpperLeg
+    400044: skeleton_base_female
+    400046: //RootNode
+    400048: spine1_loResSpine1
+    400050: spine1_loResSpine2
+    400052: spine1_loResSpine3
+    400054: TSMGWorldJoint
+    2100000: skeleton_mat
+    2300000: eye_lashes
+    2300002: eyes_skeleton_neutral
+    2300004: hair_afro_lowhanging
+    2300006: jaw_skeleton_female
+    3300000: eye_lashes
+    3300002: eyes_skeleton_neutral
+    3300004: hair_afro_lowhanging
+    3300006: jaw_skeleton_female
+    4300000: eyes_skeleton_neutral
+    4300002: eye_lashes
+    4300004: hair_afro_lowhanging
+    4300006: jaw_skeleton_female
+    4300008: skeleton_base_female
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: skeleton_base_female
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
