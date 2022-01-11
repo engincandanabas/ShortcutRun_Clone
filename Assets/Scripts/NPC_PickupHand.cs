@@ -104,35 +104,37 @@ public class NPC_PickupHand : MonoBehaviour
         stackHolderNumber = 0;
         //stackedText.gameObject.SetActive(false);
     }
-    IEnumerator PutDownObjects()
+    public void TriggerPutDownObjects()
+    {
+        StartCoroutine(PutDownObjects());
+    }
+    public IEnumerator PutDownObjects()
     {
         //ilk defa bu method cagriliyorsa kontrolu
         if (!disableWaitFirstTime)
             yield return new WaitForSeconds(.15f);
         disableWaitFirstTime = false;
         //zeminde degilse stackleri dagitmaya baslayacak
-        if (!isGrounded)
-        {
-            try
-            {
-                GameObject obj = PickedupObjectNumList[PickedupObjectNumList.Count - 1];
-                obj.transform.parent = null;
-                obj.transform.position = new Vector3(pickupPos.transform.position.x, 0, pickupPos.transform.position.z);
-                obj.gameObject.tag = "FloorStack";
-                PickedupObjectNumList.RemoveAt(PickedupObjectNumList.Count - 1);
-                PickedupObjectNum--;
-                StartCoroutine(PutDownObjects());
 
-            }
-            catch (ArgumentOutOfRangeException ex)
-            {
-                Debug.Log(ex);
-                //Jump and lose
-                Jump();
-                //LoseGame();
-            }
+        try
+        {
+            GameObject obj = PickedupObjectNumList[PickedupObjectNumList.Count - 1];
+            obj.transform.position = new Vector3(this.transform.position.x, 0, this.transform.position.z);
+            obj.gameObject.tag = "Untagged";
+            PickedupObjectNumList.RemoveAt(PickedupObjectNumList.Count - 1);
+            PickedupObjectNum--;
+            StartCoroutine(PutDownObjects());
 
         }
+        catch (ArgumentOutOfRangeException ex)
+        {
+            Debug.Log(ex);
+            //Jump and lose
+            Jump();
+            //LoseGame();
+        }
+
+
     }
     public void DestroyObject()
     {

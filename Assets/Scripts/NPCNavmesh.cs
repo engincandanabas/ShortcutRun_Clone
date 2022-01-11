@@ -16,6 +16,7 @@ public class NPCNavmesh : MonoBehaviour
     GameManager gameManager;
     public GameObject npc;
     Vector3 direction;
+    private bool checkTrigger;
 
     void Awake()
     {
@@ -26,11 +27,13 @@ public class NPCNavmesh : MonoBehaviour
         controlNavMesh = false;
         controlRayCast = false;
         enabledFirstTime=false;
+        checkTrigger=true;
         timerHit = 0;
     }
     // Update is called once per frame
     void FixedUpdate()
     {
+        this.transform.position=new Vector3(this.transform.position.x,0.9f,this.transform.position.z);
         if(this.transform.localEulerAngles.y<=340f && this.transform.localEulerAngles.y>=270f)
         {
             //Debug.LogWarning("Right");
@@ -92,8 +95,16 @@ public class NPCNavmesh : MonoBehaviour
                     navMeshAgent.enabled=true;
                     controlRayCast=false;
                     controlNavMesh = false;
-                    
+                    this.gameObject.GetComponent<NPC_PickupHand>().isGrounded=true;
+                    checkTrigger=true;
                     //Debug.LogWarning("Stack Number: "+NPC_PickupHand.stackHolderNumber);
+                }
+                if(checkTrigger)
+                {
+                    Debug.LogError("Trigger Tetiklendi");
+                    checkTrigger=false;
+                    this.gameObject.GetComponent<NPC_PickupHand>().isGrounded=false;
+                    this.gameObject.GetComponent<NPC_PickupHand>().PutDownObjects();
                 }
 
             }
