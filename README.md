@@ -14,7 +14,7 @@ Shortcut Clone Game Images
 ![ShortcutRun_3](https://user-images.githubusercontent.com/60680749/149034519-853b1fc6-d3f2-4a05-b1b3-0907030ea6e5.png)
 ![ShortcutRun_4](https://user-images.githubusercontent.com/60680749/149034524-25a42f97-88a3-4519-a49c-66a632acf4d7.png)
 
-<img src="https://user-images.githubusercontent.com/60680749/149034515-863c437d-f87b-4378-b773-d5909601dba1.png" width="250" height="250">
-<img src="https://user-images.githubusercontent.com/60680749/149034517-21f6f2cc-c811-4c1d-aec3-7b9f4db05474.png" width="250" height="250">
-<img src="https://user-images.githubusercontent.com/60680749/149034519-853b1fc6-d3f2-4a05-b1b3-0907030ea6e5.png" width="250" height="250">
-<img src="https://user-images.githubusercontent.com/60680749/149034524-25a42f97-88a3-4519-a49c-66a632acf4d7.png" width="250" height="250">
+<img src="https://user-images.githubusercontent.com/60680749/149034515-863c437d-f87b-4378-b773-d5909601dba1.png" width="250" height="400">
+<img src="https://user-images.githubusercontent.com/60680749/149034517-21f6f2cc-c811-4c1d-aec3-7b9f4db05474.png" width="250" height="400">
+<img src="https://user-images.githubusercontent.com/60680749/149034519-853b1fc6-d3f2-4a05-b1b3-0907030ea6e5.png" width="250" height="400">
+<img src="https://user-images.githubusercontent.com/60680749/149034524-25a42f97-88a3-4519-a49c-66a632acf4d7.png" width="250" height="400">
