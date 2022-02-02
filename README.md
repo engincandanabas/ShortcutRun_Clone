@@ -14,3 +14,17 @@ App Store:  https://apps.apple.com/us/app/shortcut-run/id1533397036
 <img src="https://user-images.githubusercontent.com/60680749/149034519-853b1fc6-d3f2-4a05-b1b3-0907030ea6e5.png" width="240" height="450">
 <img src="https://user-images.githubusercontent.com/60680749/149034524-25a42f97-88a3-4519-a49c-66a632acf4d7.png" width="240" height="450">
 </p>
+
+#Shortcut Clone Gameplay Video
+<p align="Center">
+  <video src="https://user-images.githubusercontent.com/60680749/152243384-b7b9ee6c-8300-4669-a72f-249d2f45f8ba.mp4">
+  <video src="https://user-images.githubusercontent.com/60680749/152243666-b13a1d54-0d6f-44f3-a736-724746f6ba76.mp4">
+</p>
+
+
+
+
+
+
+
+
