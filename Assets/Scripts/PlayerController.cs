@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] public float touchXModifier,speed;
+    public float touchXModifier,speed;
     private float _lastframefingerPosX,_moveFactorX,offsetY;
     public float _sensitivity;
     private Vector3 _mouseReference;
@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     PickUpOnHand pickUpOnHand;
     GameManager gameManager;
     public GameObject pickupPos;
+
+
     void Start()
     {
         pickUpOnHand=GetComponent<PickUpOnHand>();

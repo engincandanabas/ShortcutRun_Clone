@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 public class GameManager : MonoBehaviour
-{
-    [SerializeField] GameObject cam;
+{   public  GameObject cam;
     [SerializeField] GameObject[] gameUI,countDownUI;
     public TextMeshProUGUI playerNameText,counterText;
     public TMP_InputField enteryourName;
@@ -13,7 +12,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] float lerpTime;
     bool checkCam=true;
     public int countdownTimer;
-
     [Header("Game Status")]
     public GameStatus gameStatus;
     public enum GameStatus{

@@ -15,6 +15,16 @@ TagManager:
   - NPC_1
   - NPC_2
   - NPC_3
+  - 1X
+  - 2X
+  - 3X
+  - 4X
+  - 5X
+  - 6X
+  - 7X
+  - 8X
+  - 9X
+  - 10X
   layers:
   - Default
   - TransparentFX

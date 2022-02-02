@@ -13,7 +13,7 @@ public class PickUpOnHand : MonoBehaviour
     [Header("Destroy Stacked Object")]
     [SerializeField] private int numberOfPickupsToDestroy = 1;
     private List<GameObject> PickedupObjectNumList = new List<GameObject>();
-    private bool disableWaitFirstTime = false;
+    private bool disableWaitFirstTime = false, camFinisLerp;
     public bool isGrounded = true;
     public GameObject pickedStackObject;
     bool checkPutDownObject = true;
@@ -22,7 +22,7 @@ public class PickUpOnHand : MonoBehaviour
     private GameManager gameManager;
     private Animator animator;
     private Rigidbody rb;
-    [SerializeField] private float lerpTime;
+    [SerializeField] private float lerpTime, stackCamModifier;
     [SerializeField] private int zForce, yForce;
     bool jumpControl;
     float elapsedTime;
@@ -31,7 +31,23 @@ public class PickUpOnHand : MonoBehaviour
     [Range(0, 1)]
     [SerializeField] private float pickupLerpTime;
     public GameObject cam;
+    public GameObject[] bonusStates;
+    public Vector3 bonusStatesV;
 
+    public enum BonusControl
+    {
+        _1x,
+        _2x,
+        _3x,
+        _4x,
+        _5x,
+        _6x,
+        _7x,
+        _8x,
+        _9x,
+        _10x
+    };
+    public BonusControl bonusControl;
     void Start()
     {
         jumpControl = false;
@@ -93,8 +109,99 @@ public class PickUpOnHand : MonoBehaviour
             col.gameObject.transform.SetParent(null);
             //Change tag to prevent unwanted collisions
             col.gameObject.tag = "Untagged";
-        }
+            gameManager.cam.transform.localPosition += new Vector3(0, stackCamModifier, -stackCamModifier);
 
+        }
+        if (col.gameObject.CompareTag("1X"))
+        {
+            bonusControl = BonusControl._1x;
+            rb.velocity = Vector3.zero;
+            rb.useGravity = false;
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+            stopMoving = true;
+            isGrounded = true;
+        }
+        else if (col.gameObject.CompareTag("2X"))
+        {
+            bonusControl = BonusControl._2x;
+            rb.velocity = Vector3.zero;
+            rb.useGravity = false;
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+            stopMoving = true;
+            isGrounded = true;
+        }
+        else if (col.gameObject.CompareTag("3X"))
+        {
+            bonusControl = BonusControl._3x;
+            rb.velocity = Vector3.zero;
+            rb.useGravity = false;
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+            stopMoving = true;
+            isGrounded = true;
+        }
+        else if (col.gameObject.CompareTag("4X"))
+        {
+            bonusControl = BonusControl._4x;
+            rb.velocity = Vector3.zero;
+            rb.useGravity = false;
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+            stopMoving = true;
+            isGrounded = true;
+        }
+        else if (col.gameObject.CompareTag("5X"))
+        {
+            bonusControl = BonusControl._5x;
+            rb.velocity = Vector3.zero;
+            rb.useGravity = false;
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+            stopMoving = true;
+            isGrounded = true;
+        }
+        else if (col.gameObject.CompareTag("6X"))
+        {
+            bonusControl = BonusControl._6x;
+            rb.velocity = Vector3.zero;
+            rb.useGravity = false;
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+            stopMoving = true;
+            isGrounded = true;
+        }
+        else if (col.gameObject.CompareTag("7X"))
+        {
+            bonusControl = BonusControl._7x;
+            rb.velocity = Vector3.zero;
+            rb.useGravity = false;
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+            stopMoving = true;
+            isGrounded = true;
+        }
+        else if (col.gameObject.CompareTag("8X"))
+        {
+            bonusControl = BonusControl._8x;
+            rb.velocity = Vector3.zero;
+            rb.useGravity = false;
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+            stopMoving = true;
+            isGrounded = true;
+        }
+        else if (col.gameObject.CompareTag("9X"))
+        {
+            bonusControl = BonusControl._9x;
+            rb.velocity = Vector3.zero;
+            rb.useGravity = false;
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+            stopMoving = true;
+            isGrounded = true;
+        }
+        else if (col.gameObject.CompareTag("10X"))
+        {
+            bonusControl = BonusControl._10x;
+            rb.velocity = Vector3.zero;
+            rb.useGravity = false;
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+            stopMoving = true;
+            isGrounded = true;
+        }
     }
 
     void OnTriggerStay(Collider col)
@@ -115,6 +222,24 @@ public class PickUpOnHand : MonoBehaviour
             {
                 checkPutDownObject = false;
                 StartCoroutine(PutDownObjects());
+            }
+
+        }
+        if (col.gameObject.CompareTag("1X") || col.gameObject.CompareTag("2X") || col.gameObject.CompareTag("3X") || col.gameObject.CompareTag("4X") || col.gameObject.CompareTag("5X") || col.gameObject.CompareTag("6X") || col.gameObject.CompareTag("7X") || col.gameObject.CompareTag("8X") || col.gameObject.CompareTag("9X") || col.gameObject.CompareTag("10X"))
+        {
+            Debug.Log("Zeminden Cikildi.Zemin Adi: " + col.name);
+            isGrounded = false;
+            if (PickedupObjectNumList.Count == 0)
+            {
+                BonusCheckState();
+            }
+            else
+            {
+                if (checkPutDownObject)
+                {
+                    checkPutDownObject = false;
+                    StartCoroutine(PutDownObjects());
+                }
             }
 
         }
@@ -143,14 +268,15 @@ public class PickUpOnHand : MonoBehaviour
                 obj.gameObject.tag = "FloorStack";
                 PickedupObjectNumList.RemoveAt(PickedupObjectNumList.Count - 1);
                 PickedupObjectNum--;
+                gameManager.cam.transform.localPosition += new Vector3(0, -stackCamModifier, stackCamModifier);
                 StartCoroutine(PutDownObjects());
 
             }
             catch (ArgumentOutOfRangeException ex)
             {
-                Debug.Log(ex);
                 //Jump and lose
                 Jump();
+                //check bonus
                 //LoseGame();
             }
 
@@ -164,6 +290,8 @@ public class PickUpOnHand : MonoBehaviour
         PickedupObjectNumList.Add(pickedObject.gameObject);
         pickedObject.gameObject.tag = "Untagged";
         pickedObject.transform.SetParent(null);
+        gameManager.cam.transform.localPosition += new Vector3(0, stackCamModifier, -stackCamModifier);
+
     }
     public void DestroyObject()
     {
@@ -171,16 +299,72 @@ public class PickUpOnHand : MonoBehaviour
         obj.transform.parent = null;
         PickedupObjectNumList.RemoveAt(PickedupObjectNumList.Count - 1);
         PickedupObjectNum--;
+        gameManager.cam.transform.localPosition += new Vector3(0, -stackCamModifier, stackCamModifier);
         Destroy(obj.gameObject);
     }
     void LoseGame()
     {
+        cam.gameObject.transform.SetParent(null);
         gameManager.gameStatus = GameManager.GameStatus.fail;
         Destroy(GameObject.FindGameObjectWithTag("Player"));
         //Eger asagi dogru dusmeye baslar bitir
         stopMoving = false;
         playerController.speed = 0;
         animator.SetBool("isRun", false);
+    }
+    void BonusCheckState()
+    {
+        rb.velocity = Vector3.zero;
+        rb.useGravity = false;
+        transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+        stopMoving = true;
+        playerController.speed = 0;
+        animator.SetBool("isVictory", true);
+        cam.transform.SetParent(null);
+        camFinisLerp=true;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        if (bonusControl == BonusControl._1x)
+        {
+            this.transform.position = bonusStates[0].transform.position + bonusStatesV;
+        }
+        else if (bonusControl == BonusControl._2x)
+        {
+            this.transform.position = bonusStates[1].transform.position + bonusStatesV;
+        }
+        else if (bonusControl == BonusControl._3x)
+        {
+            this.transform.position = bonusStates[2].transform.position + bonusStatesV;
+        }
+        else if (bonusControl == BonusControl._4x)
+        {
+            this.transform.position = bonusStates[3].transform.position + bonusStatesV;
+        }
+        else if (bonusControl == BonusControl._5x)
+        {
+            this.transform.position = bonusStates[4].transform.position + bonusStatesV;
+        }
+        else if (bonusControl == BonusControl._6x)
+        {
+            this.transform.position = bonusStates[5].transform.position + bonusStatesV;
+        }
+        else if (bonusControl == BonusControl._7x)
+        {
+            this.transform.position = bonusStates[6].transform.position + bonusStatesV;
+        }
+        else if (bonusControl == BonusControl._8x)
+        {
+            this.transform.position = bonusStates[7].transform.position + bonusStatesV;
+        }
+        else if (bonusControl == BonusControl._9x)
+        {
+            this.transform.position = bonusStates[8].transform.position + bonusStatesV;
+        }
+        else if (bonusControl == BonusControl._10x)
+        {
+            this.transform.position = bonusStates[9].transform.position + bonusStatesV;
+        }
+
+
     }
     void Jump()
     {
@@ -202,26 +386,35 @@ public class PickUpOnHand : MonoBehaviour
         if (jumpControl)
         {   //zipladi ve tutunamadı 
             //level fail
-            if (playerController.GetComponent<Transform>().transform.position.y < -5)
+            if (FinishArea.isBonusStatus && playerController.GetComponent<Transform>().transform.position.y < -1f)
             {
-                cam.gameObject.transform.SetParent(null);
+                BonusCheckState();
+            }
+            else if (playerController.GetComponent<Transform>().transform.position.y < -5)
+            {
                 LoseGame();
             }
         }
 
         for (int i = 0; i < PickedupObjectNumList.Count; i++)
         {
-            PickedupObjectNumList[i].transform.rotation=this.transform.rotation;
+            PickedupObjectNumList[i].transform.rotation = this.transform.rotation;
             if (i != 0)
             {
                 PickedupObjectNumList[i].transform.position = Vector3.Lerp(PickedupObjectNumList[i].transform.position, PickedupObjectNumList[i - 1].transform.position + new Vector3(0, (PickedupObjectNumList[i - 1].gameObject.transform.localScale.y + 0.02f), 0), pickupLerpTime);
             }
             else
             {
-                PickedupObjectNumList[i].transform.position=pickupPos.transform.position;
+                PickedupObjectNumList[i].transform.position = pickupPos.transform.position;
             }
 
         }
+        if (camFinisLerp)
+        {
+            cam.transform.position = Vector3.Lerp(cam.transform.position, this.transform.position + new Vector3(0,5f, -10f), 0.2f);
+            cam.transform.rotation = Quaternion.Lerp(cam.transform.rotation,Quaternion.Euler(new Vector3(25, 0, 0)),0.2f);
+        }
+
     }
     public void ClimbOver()
     {
